@@ -4,24 +4,161 @@
    <meta chartset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Oculens</title>
+   <style>
+   
+    body {
+          font-family: Arial;
+          margin: 0;
+          background: #f5f5f5;
+         }
+
+    header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+           }
+
+    .logo {
+           font-size: 28px;
+           font-weight: bold;
+          }
+
+    .logo span {
+                font-weight: normal;
+                font-size: 14px;
+                display: block;
+               }
+
+    nav {
+         display: flex;
+         justify-content: center;
+         background: #222;
+        }
+
+    nav a {
+           color: white;
+           padding: 15px 30px;
+           text-decoration: none;
+          }
+
+    nav a: hover {
+                  background: #444;
+                 }
+
+    .hero {
+           height: 400px;
+           background: url("https://images.unsplash.com/photo-1511499767150-a48a237f0038")	 center/cover;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           color: white;
+           font-size: 30px;
+          }
+
+    .container {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 20px;
+               }
+
+    .categories {
+                 display: grid;
+                 grid-template-columns: repeat(3,1fr);
+                 gap: 10px;
+                }
+    .cat {
+          background: white;
+          padding: 30px;
+          text-align: center;
+          border: 1px solid #ddd;
+         }
+    .sidebar {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+             }
+
+    .box {
+	      background: white;
+		  padding: 40px;
+		  border: 1px solid #ddd;
+		 }
+		 
+	.guide {
+	        margin: 20px;
+			background: white;
+			padding: 40px;
+			text-align: center;
+		   }
+		   
+	footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+           }
+	</style>	   
  </head>
  <body>
   <header>
+   <div class="logo">
+    Oculens
+    <span>World of Vision</span>
+   </div>
+
+   <div>LOGO</div>
+  </header>  
    <h1> Welcome to Oculens!</h1>
    
     <nav>
 	 <a href="index.html">Home</a>
 	 <a href="about.html">About</a>
+	 <a href="services.html">Services</a>
 	 <a href="contact.html">Contact</a>
 	</nav>
 	
-  <main>
-  <p>Visit any of our stores and book your eye appointment to get our buy 1 get on free frame special. Do not worry we have the best optometrists to take care of your vision.</p>
-   <a href="https://www.instagram.com" target="_blank">Follow us on Instagram to learn more</a>
-  </main>
-  
+   <div class="hero">
+    Background image
+   </div>
+   
+   <div class="container">
+   
+   <div class="categories">
+   
+   <div class="cat">Women's Eyewear</div>
+   <div class="cat">Men's Eyewear</div>
+   <div class="cat">Sunglasses</div>
+   
+   <div class="cat">Kids Glasses</div>
+   <div class="cat">Contact lenses</div>
+   <div class="cat">Accessories</div>
+   
+   </div>
+   
+   <div class="sidebar">
+   
+   <div class="box">
+    Best Sellers Eyewear
+   </div>
+   
+   <div class="box">
+    New Arrivals
+	</div>
+	 
+	</div>
+	
+	</div>
+	
+   <div class="guide">
+    Our guide to choosing the right frame that suits you best.
+	</div>
+	
   <footer>
-    <p>&copy; 2026 Boitshwaro Motlhose</p>
+    <p>&copy; Copyrights Oculens 2026</p>
   </footer>
+  
  </body>
 </html> 
