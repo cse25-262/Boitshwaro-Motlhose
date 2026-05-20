@@ -1,143 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Services | Oculens Eyewear</title>
-        <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                margin: 0;
-                background: #f5f5f5;
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oculens Eyewear services – Eye Testing, Frame Fitting, Lens Replacement, Repairs, Prescription Glasses and Eye Health Tips." />
+  <title>Services | Oculens Eyewear</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    
+    .service-section {
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+    }
 
-            .container {
-                max-width: 1200px;
-                margin: auto;
-            }
+    .service-section:last-of-type {
+      border-bottom: none;
+    }
 
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px;
-                background: white;
-                border-bottom: 1px solid #ddd;
-            }
+    .service-section p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
 
-            .logo {
-                font-size: 28px;
-                font-weight: bold;
-            }
+    .service-link {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.92rem;
+      color: var(--primary);
+      text-decoration: underline;
+    }
 
-            .logo span {
-                display: block;
-                font-size: 14px;
-            }
+    .service-link:hover {
+      color: var(--primary-dark);
+    }
+  </style>
+</head>
+<body>
 
-            nav {
-                display: flex;
-                justify-content: center;
-                background: #222;
-            }
+  <header>
+    <div class="container header-inner">
 
-            nav a {
-                color: white;
-                padding: 15px 30px;
-                text-decoration: none;
-            }
+      <a href="index.html" class="logo" aria-label="Oculens Eyewear Home">
+        <img
+          src="images/logo.jpeg"
+          alt="Oculens Eyewear logo – glasses icon with eye and wrench"
+          width="68"
+          height="56" />
+      </a>
 
-            nav a:hover {
-                background: #444;
-            }
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
 
-            .hero {
-                height: 200px;
-                background: url("https://images.unsplash.com/photo-1511499767150-a48a237f0038") center/cover;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 30px;
-            }
+      <div class="header-icons">
+        <a href="contact.html" aria-label="Contact via email" class="icon-mail">✉</a>
+        <a href="contact.html#faq" aria-label="Help and FAQ" class="icon-help">?</a>
+      </div>
 
-            .services {
-                background: white;
-                padding: 40px;
-                margin-top: 20px;
-            }
+    </div>
+  </header>
 
-            .services h2 {
-                margin-top: 0;
-            }
+  <main>
+    <div class="container">
 
-            .service-box {
-                margin-bottom: 20px;
-                padding: 20px;
-                border: 1px solid #ddd;
-            }
+      <h1 class="page-title">Our Services</h1>
 
-            footer {
-                background: #222;
-                color: white;
-                text-align: center;
-                padding: 20px;
-                margin-top: 20px;
-            }
+      <section class="service-section" aria-labelledby="eye-testing-heading">
+        <h2 class="section-heading" id="eye-testing-heading">Eye Testing</h2>
+        <p>
+          Oculens offers comprehensive eye testing services designed to ensure optimal eye health and
+          clear vision for all ages. Their services include standard vision tests to determine prescription
+          needs, thorough eye exams to detect common conditions such as glaucoma or cataracts, and
+          specialized tests for more complex visual issues. Utilizing the latest technology, Oculens
+          provides accurate and reliable assessments, with personalized recommendations for corrective
+          lenses or treatments. Their professional team is committed to delivering exceptional care,
+          making sure each patient receives a tailored eye health plan in a comfortable and supportive
+          environment.
+        </p>
+        <a href="contact.html" class="service-link">Get your eye test now!</a>
+      </section>
 
-        </style>
-    </head>
+      <section class="service-section" aria-labelledby="frame-fitting-heading">
+        <h2 class="section-heading" id="frame-fitting-heading">Frame Fitting</h2>
+        <p>
+          Oculens offers comprehensive frame fitting services designed to cater to your unique style and
+          comfort needs, both in-store and online. Physically, our expert opticians are available to
+          assist you in selecting the perfect frames, ensuring they complement your face shape and
+          personal style while providing optimal comfort. For those who prefer virtual convenience, our
+          cutting-edge digital fitting tools enable you to try on frames from the comfort of your home.
+          With personalized recommendations and interactive video consultations, Oculens ensures you find
+          the ideal frames that suit your vision and fashion requirements, no matter where you are.
+        </p>
+        <a href="shop.html" class="service-link">Check frames now!</a>
+      </section>
 
-    <body>
-        <div class="container">
-            <header>
-                <div class="logo">
-                    Oculens
-                    <span>World of Vision</span>
-                </div>
+      <section class="service-section" aria-labelledby="lens-replacement-heading">
+        <h2 class="section-heading" id="lens-replacement-heading">Lens Replacement</h2>
+        <p>
+          Oculens offers an innovative lens replacement service designed to enhance visual clarity and
+          comfort. This cutting-edge procedure involves replacing the eye's natural lens with a
+          high-quality artificial lens, tailored to meet individual vision needs. Whether addressing
+          cataracts or reducing dependency on glasses, Oculens ensures that each lens is meticulously
+          crafted to offer optimal performance. The procedure is performed by experienced ophthalmologists
+          using high-quality materials and advanced technology, resulting in a seamless experience with
+          minimal recovery time. Oculens is committed to improving quality of life by restoring sharp,
+          vibrant vision for its patients.
+        </p>
+        <a href="contact.html" class="service-link">Fill form now!</a>
+      </section>
 
-                <div>LOGO</div>
-            </header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+      <section class="service-section" aria-labelledby="repairs-heading">
+        <h2 class="section-heading" id="repairs-heading">Repairs</h2>
+        <p>
+          Oculens offers a comprehensive range of repair services tailored to meet the needs of optical
+          device users. Specializing in the maintenance and repair of eyeglasses, contact lenses, and
+          various optical instruments, Oculens ensures that your vision aids are always in optimal
+          condition. Their skilled technicians are adept at handling everything from minor adjustments
+          and lens replacements to complex frame repairs. Additionally, Oculens prides itself on using
+          high-quality materials and advanced techniques to restore your optical devices to their original
+          functionality. With a commitment to customer satisfaction, Oculens provides prompt service and
+          personalized care, making them a trusted choice for all your optical repair needs.
+        </p>
+        <a href="contact.html" class="service-link">Repair now!</a>
+      </section>
 
-            <div class="hero">
-                Our Services
-            </div>
+      <section class="service-section" aria-labelledby="prescription-heading">
+        <h2 class="section-heading" id="prescription-heading">Prescription Glasses</h2>
+        <p>
+          Oculens offers a comprehensive prescription glasses service designed to cater to a wide range
+          of vision needs. Their service begins with a thorough eye examination conducted by experienced
+          optometrists, ensuring accurate prescriptions tailored to everyone. Oculens provides a broad
+          selection of stylish frames, accommodating various tastes and preferences, and uses high-quality
+          lenses crafted with precision to enhance visual clarity. With a focus on customer satisfaction,
+          personalized consultations assist clients in selecting the perfect eyewear. Additionally,
+          Oculens ensures timely delivery and provides aftercare services to maintain the longevity of
+          their products, making them a trusted choice for prescription glasses.
+        </p>
+        <a href="contact.html" class="service-link">Fill form now!</a>
+      </section>
 
-            <section class="services">
-                <h2>What We Offer</h2>
+      <section id="guide" class="service-section" aria-labelledby="tips-heading">
+        <h2 class="section-heading" id="tips-heading">Eye Health Tips</h2>
+        <p>
+          At Oculens, we are dedicated to promoting optimal eye health through a range of expert tips and
+          comprehensive guidance. Our recommendations include maintaining a balanced diet rich in vitamins
+          A, C, and E, as well as omega-3 fatty acids, which support overall eye wellness. We emphasize
+          the importance of regular eye exams to detect any issues early and ensure that your vision
+          remains sharp. Additionally, we advocate for protective eyewear when engaging in activities
+          that could harm your eyes, such as sports or working with hazardous materials. Our guidance
+          also covers digital eye strain prevention, recommending frequent breaks and proper screen
+          positioning to reduce fatigue. Trust Oculens to help you see the world clearly and comfortably.
+        </p>
+        <a href="about.html" class="service-link">Learn more!</a>
+      </section>
 
-                <div class="service-box">
-                    <h3>Eye Testing</h3>
-                    <p>Professional eye examinations to ensure your vision is clear and healthy.</p>
-                </div>
+    </div>
+  </main>
 
-                <div class="service-box">
-                    <h3>Frame Fitting</h3>
-                    <p>Expert assistance in choosing frames that suit your face and style.</p>
-                </div>
+  <footer>
+    <a href="#guide" class="footer-link">Guide to choosing the right frame</a>
+    <p class="footer-copy">Copyrights &nbsp; 2026 Oculens Eyewear</p>
+    <nav aria-label="social media">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/26778567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="images/social-whatsapp.png" alt="WhatsApp logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/official.Oculens_Eyewear" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="images/social-instagram.png" alt="Instagram logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/OculensEyewear" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/social-facebook.png" alt="Facebook logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@Oculens_Eyewear.officia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="images/social-tiktok.png" alt="TikTok logo" width="48" height="48" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 
-                <div class="service-box">
-                    <h3>Lens Replacement</h3>
-                    <p>Quick and reliable replacement of damaged or outdated lenses.</p>
-                </div>
-
-                <div class="service-box">
-                    <h3>Repairs</h3>
-                    <p>We repair broken frames and adjust fittings for maximum comfort.</p>
-                </div>
-
-            </section>
-
-            <footer>
-               <p>&copy; Copyrights Oculens 2026</p>
-            </footer>
-
-        </div>
-    </body>
+</body>
 </html>

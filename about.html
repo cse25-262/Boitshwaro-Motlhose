@@ -1,141 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device, initial-scale=1.0">
-        <title>About Us | Oculens Eyewear</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about Oculens Eyewear – our story, mission and values. Established in the early 2000s, we blend innovative design with cutting-edge technology." />
+  <title>About Us | Oculens Eyewear</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    
+    .about-section {
+      margin-bottom: 48px;
+    }
 
-      <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background: #f5f5f5;
-        }
+    .about-section p {
+      margin-bottom: 16px;
+      font-size: 0.97rem;
+      color: var(--dark);
+      line-height: 1.8;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
+    .values-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 16px;
+    }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: #f5f5f5;
-            border-bottom: 1px solid #ddd;
-        }
+    .values-list li {
+      margin-bottom: 18px;
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: var(--dark);
+    }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-        }
+    .values-list li strong {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
 
-        .logo span{
-            display: block;
-            font-size: 14px;
-            font-weight: normal;
-        }
+  <header>
+    <div class="container header-inner">
 
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #222;
-        }
+      <a href="index.html" class="logo" aria-label="Oculens Eyewear Home">
+        <img
+          src="images/logo.jpeg"
+          alt="Oculens Eyewear logo – glasses icon with eye and wrench"
+          width="68"
+          height="56" />
+      </a>
 
-        nav a {
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-        }
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
 
-        nav a:hover {
-            background: #444;
-        }
-
-        .hero {
-            height: 200px;
-            background: url("https://images.unsplash.com/photo-1511499767150-a48a237f0038") center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 30px;
-        }
-       
-        .about-section {
-            background: white;
-            padding: 40px;
-            margin-top: 20px;
-            line-height: 1.6;
-        }
-
-        .about-section h2 {
-            margin-top: 0;
-        }
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-      </style>
-    </head>
-
-   <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                Oculens
-                <span>World of Vision</span>
-            </div>
-
-            <div>LOGO</div>
-        </header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <div class="hero">
-            About Our Brand 
-        </div>
-
-        <section class="about-section">
-            <h2>Who We Are </h2>
-            <p>
-                Oculens Eyewear is dedicated to providing high-quality glasses and eyewear that combine style, comfort, and durability. Our goal is to help people see clearly while expressing themselves in their own style through modern,stylish and classic frames.
-            </p>
-
-            <p>
-                We offer a wide variety of eyewear including women's frames, men's frames, sunglasses, kids glasses, contact lenses, and accessories. Our collection features fashionable designs suitable for every occassion and everyday wear as well as professional environments.
-            </p>
-
-            <h2>Our Mission</h2>
-            <p>
-                Our mission is to provide customers with eyewear that enhances both vision and confidence. We aim to deliver affordable products without compromising quality, ensuring every customer finds the perfect pair of frames.
-            </p>
-
-             <h2>Why Choose Us</h2>
-             
-             <ul>
-                <li>High-quality eyewear products</li>
-                <li>Modern and stylish frame designs </li>
-                <li>Affordable prices</li>
-                <li>Expert assistance in choosing frames</li>
-                <li>Reliable customer services</li>
-             </ul>
-        </section>
-
-        <footer>
-            <p>&copy; Copyrights Oculens 2026</p>
-        </footer>
+      <div class="header-icons">
+        <a href="contact.html" aria-label="Contact via email" class="icon-mail">✉</a>
+        <a href="contact.html#faq" aria-label="Help and FAQ" class="icon-help">?</a>
+      </div>
 
     </div>
-   </body>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <h1 class="page-title">About Us</h1>
+
+      <section class="about-section" aria-labelledby="story-heading">
+        <h2 class="section-heading" id="story-heading">Our Story</h2>
+        <p>
+          Oculens Eyewear, established in the early 2000s, has quickly become a prominent name in the
+          eyewear industry. Its history is rooted in a passion for blending innovative design with
+          cutting-edge technology to create eyewear that is both stylish and functional. The company's
+          mission is to enhance vision and enrich lives by providing high-quality eyewear that meets the
+          diverse needs of its customers. Oculens is committed to sustainability, utilizing eco-friendly
+          materials and manufacturing processes to reduce its environmental impact. The vision of Oculens
+          is to be a global leader in eyewear, known for its exceptional craftsmanship, customer-centric
+          approach, and dedication to improving optical health. By continually pushing the boundaries of
+          design and technology, Oculens aims to set new standards in the eyewear industry. With a focus
+          on both form and function, Oculens Eyewear offers a diverse range of products that cater to
+          various tastes and preferences. From classic frames that exude timeless elegance to modern,
+          avant-garde designs that make a bold statement, there is something for everyone in their
+          collection. Each piece is meticulously crafted, reflecting the brand's commitment to quality
+          and attention to detail.
+        </p>
+        <p>
+          Oculens also place a strong emphasis on customer satisfaction. By offering personalized fitting
+          services and a responsive customer support team, the company ensures that each customer receives
+          unparalleled shopping experience. Their commitment to innovation is evident in the continuous
+          development of new technologies, such as adaptive lenses and blue light filtering options, which
+          address the evolving needs of their clientele.
+        </p>
+        <p>
+          As Oculens Eyewear continues to expand its global presence, it remains steadfast in its promise
+          to deliver excellence in every aspect of its business, from product development to social
+          responsibility. Through collaborations with designers and industry experts, the company is
+          poised to remain at the forefront of eyewear innovation, shaping the future of vision care for
+          generations to come.
+        </p>
+      </section>
+
+      <section class="about-section" aria-labelledby="mission-heading">
+        <h2 class="section-heading" id="mission-heading">Our Mission</h2>
+        <p>
+          Oculens is driven by a mission to revolutionize the world of vision technology by providing
+          innovative solutions that enhance the way we perceive and interact with our environment. At the
+          heart of Oculens' mission is a commitment to improving quality of life through advanced optical
+          technologies, whether it be through developing cutting-edge eyewear, augmented reality
+          applications, or vision-correction devices. Oculens strives to blend functionality with
+          elegance, ensuring that its products not only meet the highest standards of performance but also
+          cater to the aesthetic and practical needs of its users. By fostering a culture of research,
+          collaboration, and inclusiveness, Oculens aims to push the boundaries of what is possible in
+          Vision, care and technology, ultimately making a positive impact on individuals and communities
+          worldwide.
+        </p>
+      </section>
+
+      <section class="about-section" aria-labelledby="values-heading">
+        <h2 class="section-heading" id="values-heading">Our Values</h2>
+        <ol class="values-list">
+          <li>
+            <strong>Innovation</strong>: Oculens Eyewear is dedicated to pushing the boundaries of
+            optical technology. By consistently integrating the latest advancements in lens and frame
+            design, they ensure that customers benefit from cutting-edge solutions that enhance vision
+            and comfort.
+          </li>
+          <li>
+            <strong>Sustainability</strong>: Committed to environmental responsibility, Oculens Eyewear
+            prioritizes sustainable practices throughout their production process. This includes using
+            eco-friendly materials and minimizing waste, reflecting their dedication to preserving the
+            planet for future generations.
+          </li>
+          <li>
+            <strong>Customer-Centricity</strong>: At the heart of Oculens Eyewear's philosophy is a
+            strong focus on customer satisfaction. They strive to understand and meet the unique needs
+            of everyone, delivering personalized service and high-quality products that foster lasting
+            customer relationships.
+          </li>
+        </ol>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="services.html#guide" class="footer-link">Guide to choosing the right frame</a>
+    <p class="footer-copy">Copyrights &nbsp; 2026 Oculens Eyewear</p>
+    <nav aria-label="social media">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/26778567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="images/social-whatsapp.png" alt="WhatsApp logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/official.Oculens_Eyewear" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="images/social-instagram.png" alt="Instagram logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/OculensEyewear" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/social-facebook.png" alt="Facebook logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@Oculens_Eyewear.officia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="images/social-tiktok.png" alt="TikTok logo" width="48" height="48" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
 </html>

@@ -1,164 +1,244 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta chartset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Oculens</title>
-   <style>
-   
-    body {
-          font-family: Arial;
-          margin: 0;
-          background: #f5f5f5;
-         }
-
-    header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: white;
-            border-bottom: 1px solid #ddd;
-           }
-
-    .logo {
-           font-size: 28px;
-           font-weight: bold;
-          }
-
-    .logo span {
-                font-weight: normal;
-                font-size: 14px;
-                display: block;
-               }
-
-    nav {
-         display: flex;
-         justify-content: center;
-         background: #222;
-        }
-
-    nav a {
-           color: white;
-           padding: 15px 30px;
-           text-decoration: none;
-          }
-
-    nav a: hover {
-                  background: #444;
-                 }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oculens Eyewear – World of Vision. Shop premium eyewear including glasses, sunglasses, contact lenses and accessories." />
+  <title>Home | Oculens Eyewear</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
 
     .hero {
-           height: 250px;
-           background: url("https://images.unsplash.com/photo-1511499767150-a48a237f0038")	 center/cover;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           color: white;
-           font-size: 30px;
-          }
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #1a1a1a;
+      margin-bottom: 56px;
+    }
 
-    .container {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 20px;
-               }
+    .hero img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      opacity: 0.75;
+      display: block;
+    }
 
-    .categories {
-                 display: grid;
-                 grid-template-columns: repeat(3,1fr);
-                 gap: 10px;
-                }
-    .cat {
-          background: white;
-          padding: 30px;
-          text-align: center;
-          border: 1px solid #ddd;
-         }
-    .sidebar {
-              display: flex;
-              flex-direction: column;
-              gap: 20px;
-             }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translateY(-50%);
+      color: var(--white);
+    }
 
-    .box {
-	      background: white;
-		  padding: 40px;
-		  border: 1px solid #ddd;
-		 }
-		 
-	.guide {
-	        margin: 20px;
-			background: white;
-			padding: 40px;
-			text-align: center;
-		   }
-		   
-	footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-           }
-	</style>	   
- </head>
- <body>
+    .hero-text h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .hero-text h1 em {
+      display: block;
+      font-style: italic;
+      font-size: 2.5rem;
+    }
+
+    .products-section {
+      margin-bottom: 56px;
+    }
+
+    .product-grid-home {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .product-card-home img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: var(--light);
+      border-radius: var(--radius);
+    }
+
+    .product-card-home .product-name {
+      font-size: 0.88rem;
+      margin-top: 8px;
+      color: var(--dark);
+    }
+
+    .product-card-home .product-price {
+      font-size: 0.88rem;
+      color: var(--mid);
+    }
+
+    @media (max-width: 700px) {
+      .product-grid-home { grid-template-columns: 1fr; }
+      .hero-text h1 { font-size: 2rem; }
+      .hero-text h1 em { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
   <header>
-   <div class="logo">
-    Oculens
-    <span>World of Vision</span>
-   </div>
+    <div class="container header-inner">
 
-   <div>LOGO</div>
-  </header>  
-   <h1> Welcome to Oculens!</h1>
-   
-    <nav>
-	 <a href="index.html">Home</a>
-	 <a href="about.html">About</a>
-	 <a href="services.html">Services</a>
-	 <a href="contact.html">Contact</a>
-	</nav>
-	
-   <div class="hero">
-    Background image
-   </div>
-   
-   <div class="container">
-   
-   <div class="categories">
-   
-   <div class="cat">Women's Eyewear</div>
-   <div class="cat">Men's Eyewear</div>
-   <div class="cat">Sunglasses</div>
-   
-   <div class="cat">Kids Glasses</div>
-   <div class="cat">Contact lenses</div>
-   <div class="cat">Accessories</div>
-   
-   </div>
-   
-   <div class="sidebar">
-   
-   <div class="box">
-    Best Sellers Eyewear
-   </div>
-   
-   <div class="box">
-    New Arrivals
-	</div>
-	 
-	</div>
-	
-	</div>
-	
-   <div class="guide">
-    Our guide to choosing the right frame that suits you best.
-	</div>
-	
+      <a href="index.html" class="logo" aria-label="Oculens Eyewear Home">
+        <img
+          src="images/logo.jpeg"
+          alt="Oculens Eyewear logo – glasses icon with eye and wrench"
+          width="68"
+          height="56" />
+      </a>
+
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="index.html"     aria-current="page">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <a href="contact.html" aria-label="Contact via email" class="icon-mail">✉</a>
+        <a href="about.html#faq" aria-label="Help and FAQ" class="icon-help">?</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Hero banner – See the world in style">
+      <img
+        src="images/hero-banner.jpg"
+        alt="Close-up of a luxury Prada glasses frame on a light background"
+        width="1100"
+        height="380" />
+      <div class="hero-text">
+        <h1>
+          See the world
+          <em>in style</em>
+        </h1>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="products-section" aria-labelledby="featured-heading">
+        <h2 class="section-heading-center" id="featured-heading">Featured Products</h2>
+
+        <div class="product-grid-home">
+
+          <article class="product-card-home">
+            <img
+              src="images/deluca-round.jpg"
+              alt="Deluca Black Round glasses – thin metal round frames on white background"
+              width="340"
+              height="200" />
+            <p class="product-name">Product name: Deluca Black Round glasses</p>
+            <p class="product-price">Price: P400</p>
+          </article>
+
+          <article class="product-card-home">
+            <img
+              src="images/gossip-girl-cateye.jpg"
+              alt="Gossip Girl CatEye glasses – rose-gold butterfly frames on white background"
+              width="340"
+              height="200" />
+            <p class="product-name">Product name: Gossip Girl CatEye glasses</p>
+            <p class="product-price">Price: P350</p>
+          </article>
+
+          <article class="product-card-home">
+            <img
+              src="images/fila-square.jpg"
+              alt="Fila Square glasses – solid black thick-frame glasses on white background"
+              width="340"
+              height="200" />
+            <p class="product-name">Product name: Flla Square glasses</p>
+            <p class="product-price">Price: P500</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="products-section" aria-labelledby="new-arrivals-heading">
+        <h2 class="section-heading-center" id="new-arrivals-heading">New Arrivals</h2>
+
+        <div class="product-grid-home">
+
+          <article class="product-card-home">
+            <img
+              src="images/kids-purple.jpg"
+              alt="Purple silicone kids' sports glasses with adjustable strap on white background"
+              width="340"
+              height="200" />
+            <p class="product-name">Product name: Kids Purple Sport Glasses</p>
+            <p class="product-price">Price: P180</p>
+          </article>
+
+          <article class="product-card-home">
+            <img
+              src="images/black-cateye-sunglasses.jpg"
+              alt="Black oversized cat-eye sunglasses with gradient lenses on white background"
+              width="340"
+              height="200" />
+            <p class="product-name">Product name: Black CatEye Sunglasses</p>
+            <p class="product-price">Price: P320</p>
+          </article>
+
+          <article class="product-card-home">
+            <img
+              src="images/gucci-round-sunglasses.jpg"
+              alt="Gucci round dark sunglasses with gold bridge detail on white background"
+              width="340"
+              height="200" />
+            <p class="product-name">Product name: Gucci Round Sunglasses</p>
+            <p class="product-price">Price: P950</p>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
   <footer>
-    <p>&copy; Copyrights Oculens 2026</p>
+    <a href="services.html#guide" class="footer-link">Guide to choosing the right frame</a>
+    <p class="footer-copy">Copyrights &nbsp; 2026 Oculens Eyewear</p>
+    <nav aria-label="social media">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/26778567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="images/social-whatsapp.png" alt="WhatsApp logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/official.Oculens_Eyewear" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="images/social-instagram.png" alt="Instagram logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/OculensEyewear" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/social-facebook.png" alt="Facebook logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@Oculens_Eyewear.officia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="images/social-tiktok.png" alt="TikTok logo" width="48" height="48" />
+          </a>
+        </li>
+      </ul>
+    </nav>
   </footer>
-  
- </body>
-</html> 
+
+</body>
+</html>

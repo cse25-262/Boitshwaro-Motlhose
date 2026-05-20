@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop Oculens Eyewear – browse glasses, sunglasses, contact lenses and accessories. Filter by category, price range and frame type." />
+  <title>Shop | Oculens Eyewear</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    
+    .shop-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .filters-sidebar {
+      padding: 20px 0;
+    }
+
+    .filters-sidebar h2 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--dark);
+    }
+
+    .filter-checkbox-group {
+      margin-bottom: 4px;
+    }
+
+    .filter-checkbox-group label {
+      font-size: 1.05rem;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .filter-select-group {
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    .filter-select-group select {
+      font-size: 0.92rem;
+      border-radius: var(--radius-pill);
+      padding: 8px 14px;
+    }
+
+    .btn-apply {
+      margin-top: 16px;
+    }
+
+    /* Product grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .shop-product-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      background: var(--light);
+      border-radius: var(--radius);
+      margin-bottom: 10px;
+    }
+
+    .shop-product-card .product-name {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .shop-product-card .product-price {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: var(--mid);
+    }
+
+    .shop-checkout-bar {
+      margin-top: 40px;
+    }
+
+    .btn-checkout-bar {
+      background: var(--btn-bg);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 14px 32px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      line-height: 1.2;
+      text-decoration: none;
+    }
+
+    .btn-checkout-bar:hover {
+      background: var(--btn-hover);
+      color: var(--white);
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .pagination a,
+    .pagination span {
+      display: inline-block;
+      padding: 4px 10px;
+      color: var(--primary);
+      text-decoration: underline;
+      font-size: 0.95rem;
+    }
+
+    .pagination a:hover {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 860px) {
+      .shop-layout { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Oculens Eyewear Home">
+        <img
+          src="images/logo.jpeg"
+          alt="Oculens Eyewear logo – glasses icon with eye and wrench"
+          width="68"
+          height="56" />
+      </a>
+
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <a href="contact.html" aria-label="Contact via email" class="icon-mail">✉</a>
+        <a href="contact.html#faq" aria-label="Help and FAQ" class="icon-help">?</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <h1 class="page-title">Shop</h1>
+
+      <div class="shop-layout">
+
+        <aside aria-label="Product filters">
+          <section class="filters-sidebar">
+            <h2>Filters</h2>
+
+            <div class="filter-checkbox-group checkbox-group">
+              <input type="checkbox" id="filter-women" name="filter" value="women" />
+              <label for="filter-women">Women</label>
+            </div>
+
+            <div class="filter-checkbox-group checkbox-group">
+              <input type="checkbox" id="filter-men" name="filter" value="men" />
+              <label for="filter-men">Men</label>
+            </div>
+
+            <div class="filter-checkbox-group checkbox-group">
+              <input type="checkbox" id="filter-kids" name="filter" value="kids" />
+              <label for="filter-kids">Kids</label>
+            </div>
+
+            <div class="filter-checkbox-group checkbox-group">
+              <input type="checkbox" id="filter-sunglasses" name="filter" value="sunglasses" />
+              <label for="filter-sunglasses">Sunglasses</label>
+            </div>
+
+            <div class="filter-checkbox-group checkbox-group">
+              <input type="checkbox" id="filter-contact" name="filter" value="contact-lenses" />
+              <label for="filter-contact">Contact lenses</label>
+            </div>
+
+            <div class="filter-checkbox-group checkbox-group">
+              <input type="checkbox" id="filter-accessories" name="filter" value="accessories" />
+              <label for="filter-accessories">Accessories</label>
+            </div>
+
+            <div class="filter-select-group">
+              <label for="price-range">Price Range</label>
+              <select id="price-range" name="price-range" aria-label="Select price range">
+                <option value="">Price Range</option>
+                <option value="0-200">P0 – P200</option>
+                <option value="200-500">P200 – P500</option>
+                <option value="500-1000">P500 – P1000</option>
+                <option value="1000+">P1000+</option>
+              </select>
+            </div>
+
+            <div class="filter-select-group">
+              <label for="frame-type">Frame Type</label>
+              <select id="frame-type" name="frame-type" aria-label="Select frame type">
+                <option value="">Frame Type</option>
+                <option value="full-rim">Full Rim</option>
+                <option value="half-rim">Half Rim</option>
+                <option value="rimless">Rimless</option>
+                <option value="square">Square</option>
+                <option value="round">Round</option>
+                <option value="cateye">Cat-Eye</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-apply" onclick="applyFilters()">
+              Apply Filter
+            </button>
+          </section>
+        </aside>
+
+        <section aria-label="Product listing">
+
+          <div class="products-grid" id="products-grid">
+
+            <article class="shop-product-card">
+              <img
+                src="images/men-square-metallic.jpg"
+                alt="Men Square Metallic frame – silver double-bridge aviator style glasses on white background"
+                width="460"
+                height="240" />
+              <p class="product-name">Product name: Men Square Metallic frame</p>
+              <p class="product-price">Price: P 550</p>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addToCart('Men Square Metallic frame', 550)">
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="shop-product-card">
+              <img
+                src="images/funky-sunglasses.jpg"
+                alt="Funky Sunglasses – sleek black wrap-around sport sunglasses on white background"
+                width="460"
+                height="240" />
+              <p class="product-name">Product name: Funky Sunglasses</p>
+              <p class="product-price">Price: P 300</p>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addToCart('Funky Sunglasses', 300)">
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="shop-product-card">
+              <img
+                src="images/contact-lens-hazelnut.jpg"
+                alt="Hazelnut brown contact lens – single contact lens displayed on white background showing brown colour"
+                width="460"
+                height="240" />
+              <p class="product-name">Product name: Hazelnut brown contact lens</p>
+              <p class="product-price">Price: P 80</p>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addToCart('Hazelnut brown contact lens', 80)">
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="shop-product-card">
+              <img
+                src="images/glasses-case-pink.jpg"
+                alt="Pink bow cute glasses case – pink oval hard shell glasses case with white bow ribbon pattern"
+                width="460"
+                height="240" />
+              <p class="product-name">Product name: Pink bow cute glasses case</p>
+              <p class="product-price">Price: P 200</p>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addToCart('Pink bow cute glasses case', 200)">
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="shop-product-card">
+              <img
+                src="images/silver-rimless.jpg"
+                alt="Silver Rimless Prescription glasses – minimalist frameless round glasses with silver nose bridge on white background"
+                width="460"
+                height="240" />
+              <p class="product-name">Product name: Silver Rimless Prescription glasses</p>
+              <p class="product-price">Price: P 450</p>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addToCart('Silver Rimless Prescription glasses', 450)">
+                Add to Cart
+              </button>
+            </article>
+
+            <article class="shop-product-card">
+              <img
+                src="images/kids-blue-prescription.jpg"
+                alt="Light blue Kids Prescription glasses – blue rubber flexible kids glasses with adjustable strap on white background"
+                width="460"
+                height="240" />
+              <p class="product-name">Product name: Light blue Kids Prescription glasses</p>
+              <p class="product-price">Price: P 250</p>
+              <button type="button" class="btn btn-primary btn-sm" onclick="addToCart('Light blue Kids Prescription glasses', 250)">
+                Add to Cart
+              </button>
+            </article>
+
+          </div>
+
+          <div class="shop-checkout-bar">
+            <a href="cart.html" class="btn-checkout-bar">
+              Checkout<br />
+              <span id="subtotal-display">Subtotal Price(P) 0</span>
+            </a>
+          </div>
+
+          <nav class="pagination" aria-label="Product page navigation">
+            <a href="#" aria-label="Previous page">&lt;&lt; Prev</a>
+            <a href="#" aria-label="Page 1">1</a>
+            <a href="#" aria-label="Page 2">2</a>
+            <a href="#" aria-label="Page 3">3</a>
+            <a href="#" aria-label="Page 4">4</a>
+            <a href="#" aria-label="Page 5">5</a>
+            <a href="#" aria-label="Page 6">6</a>
+            <a href="#" aria-label="Page 7">7</a>
+            <a href="#" aria-label="Page 8">8</a>
+            <a href="#" aria-label="Page 9">9</a>
+            <a href="#" aria-label="Page 10">10</a>
+            <a href="#" aria-label="Next page">Next &gt;&gt;</a>
+          </nav>
+
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="services.html#guide" class="footer-link">Guide to choosing the right frame</a>
+    <p class="footer-copy">Copyrights &nbsp; 2026 Oculens Eyewear</p>
+    <nav aria-label="social media">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/26778567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="images/social-whatsapp.png" alt="WhatsApp logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/official.Oculens_Eyewear" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="images/social-instagram.png" alt="Instagram logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/OculensEyewear" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/social-facebook.png" alt="Facebook logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@Oculens_Eyewear.officia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="images/social-tiktok.png" alt="TikTok logo" width="48" height="48" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    var subtotal = 0;
+
+    function addToCart(name, price) {
+      subtotal += price;
+      document.getElementById('subtotal-display').textContent =
+        'Subtotal Price(P) ' + subtotal;
+    }
+
+    function applyFilters() {
+      /* Filter logic placeholder – extend with real data */
+      alert('Filters applied. (Extend this function with real data filtering.)');
+    }
+  </script>
+
+</body>
+</html>

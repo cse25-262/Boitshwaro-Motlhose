@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chrome Hearts Full Rim Acetate glasses – stylish, luxurious and intricately designed eyewear at Oculens Eyewear." />
+  <title>Product Details | Oculens Eyewear</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    
+    .product-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+      align-items: start;
+    }
+
+    .product-detail-image img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      background: var(--light);
+    }
+
+    .product-detail-info h2 {
+      font-family: var(--font-body);
+      font-size: 0.97rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .product-detail-info .detail-price {
+      font-size: 0.97rem;
+      margin-bottom: 16px;
+    }
+
+    .product-detail-info .detail-desc {
+      font-size: 0.93rem;
+      line-height: 1.8;
+      color: var(--mid);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .product-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .product-options select {
+      border-radius: var(--radius);
+      font-size: 0.92rem;
+    }
+
+    .btn-virtual {
+      background: var(--btn-bg);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-pill);
+      padding: 10px 24px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-top: 20px;
+      font-family: var(--font-body);
+      font-weight: 500;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-virtual:hover {
+      background: var(--btn-hover);
+      color: var(--white);
+    }
+
+    .reviews-section {
+      margin-bottom: 48px;
+    }
+
+    .review-stars {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .review-count {
+      font-size: 0.92rem;
+      color: var(--mid);
+    }
+
+    .review-quote {
+      font-size: 0.93rem;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .btn-read-more {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--primary-light);
+      color: var(--white);
+      border-radius: var(--radius-pill);
+      padding: 6px 18px;
+      font-size: 0.88rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .btn-read-more:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    /* Related Products */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: var(--light);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+    }
+
+    .related-card .product-name {
+      font-size: 0.88rem;
+      margin-bottom: 4px;
+    }
+
+    .related-card .product-price {
+      font-size: 0.88rem;
+      color: var(--mid);
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .product-detail-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Oculens Eyewear Home">
+        <img
+          src="images/logo.jpeg"
+          alt="Oculens Eyewear logo – glasses icon with eye and wrench"
+          width="68"
+          height="56" />
+      </a>
+
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <a href="contact.html" aria-label="Contact via email" class="icon-mail">✉</a>
+        <a href="contact.html#faq" aria-label="Help and FAQ" class="icon-help">?</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section aria-labelledby="product-name-heading">
+
+        <div class="product-detail-grid">
+
+          <div class="product-detail-image">
+            <img
+              src="images/chrome-hearts-full-rim.jpg"
+              alt="Chrome Hearts Full Rim Acetate glasses – black thick-frame acetate glasses with silver cross and fleur-de-lis engravings on the temples"
+              width="530"
+              height="380" />
+
+            <button type="button" class="btn-virtual" onclick="alert('Virtual Try-On coming soon!')">
+              Virtual Try On
+            </button>
+          </div>
+
+          <div class="product-detail-info">
+            <h2 id="product-name-heading">
+              Product name: Chrome hearts Full Rim Acetate glasses
+            </h2>
+            <p class="detail-price">Price: P400</p>
+            <p class="detail-desc">
+              Chrome Hearts full rim glasses are stylish, luxurious, and intricately designed.
+              Known for their distinctive, rock-and-roll elegance, they feature engraved motifs
+              and sterling silver accents. Durable and bold, these glasses blend fashion with
+              function, showcasing premium craftsmanship and sophisticated style.
+            </p>
+
+            <div class="product-options">
+              <label for="color-options">Color options</label>
+              <select id="color-options" name="color-options" required>
+                <option value="">Color options</option>
+                <option value="black">Black</option>
+                <option value="tortoise">Tortoise</option>
+                <option value="clear">Clear</option>
+              </select>
+
+              <label for="lens-options">Lens options</label>
+              <select id="lens-options" name="lens-options" required>
+                <option value="">Lens options</option>
+                <option value="clear">Clear</option>
+                <option value="tinted">Tinted</option>
+                <option value="prescription">Prescription</option>
+                <option value="blue-light">Blue Light Filter</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="reviews-section" aria-labelledby="reviews-heading">
+        <h2 id="reviews-heading">Customer Reviews</h2>
+
+        <div class="review-stars">
+          <span class="stars" aria-label="3.5 out of 5 stars">★★★<span class="empty">☆☆</span></span>
+          <span class="review-count">(26 Reviews)</span>
+        </div>
+
+        <p class="review-quote">"Amazing fit and quality!!" - Hannah</p>
+        <p class="review-quote">"Perfect for my daily wear." - Dan</p>
+
+        <a href="#" class="btn-read-more" aria-label="Read all 26 customer reviews">Read more</a>
+      </section>
+
+      <section aria-labelledby="related-heading">
+        <h2 class="section-heading-center" id="related-heading">Related Products</h2>
+
+        <div class="related-grid">
+
+          <article class="related-card">
+            <img
+              src="images/chrome-heart-half-rim.jpg"
+              alt="Chrome Heart Half Rim glasses – silver half-frame glasses with chrome cross accents on white background"
+              width="460"
+              height="200" />
+            <p class="product-name">Product name: Chrome Heart Half Rim glasses</p>
+            <p class="product-price">Price: 350</p>
+            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Chrome Heart Half Rim glasses added to cart')">
+              Add to Cart
+            </button>
+          </article>
+
+          <article class="related-card">
+            <img
+              src="images/chrome-heart-square.jpg"
+              alt="Chrome Heart Square glasses – rectangular chrome-accented metal frame glasses on white background"
+              width="460"
+              height="200" />
+            <p class="product-name">Product name: Chrome Heart Square glasses</p>
+            <p class="product-price">Price: 350</p>
+            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Chrome Heart Square glasses added to cart')">
+              Add to Cart
+            </button>
+          </article>
+
+          <article class="related-card">
+            <img
+              src="images/chrome-heart-acetate.jpg"
+              alt="Chrome Heart Acetate glasses – clear transparent acetate thick-frame glasses with silver cross emblems"
+              width="460"
+              height="200" />
+            <p class="product-name">Product name: Chrome Heart Acetate glasses</p>
+            <p class="product-price">Price: 300</p>
+            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Chrome Heart Acetate glasses added to cart')">
+              Add to Cart
+            </button>
+          </article>
+
+          <article class="related-card">
+            <img
+              src="images/chrome-heart-tokyo.jpg"
+              alt="Chrome Heart Below Me TT Tokyo Tortoise glasses – tortoise-shell pattern large square acetate frames with silver cross hardware"
+              width="460"
+              height="200" />
+            <p class="product-name">Product name: Chrome Heart Below Me TT Tokyo Tortoise glasses</p>
+            <p class="product-price">Price: 300</p>
+            <button type="button" class="btn btn-primary btn-sm" onclick="alert('Chrome Heart Below Me TT Tokyo Tortoise glasses added to cart')">
+              Add to Cart
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="services.html#guide" class="footer-link">Guide to choosing the right frame</a>
+    <p class="footer-copy">Copyrights &nbsp; 2026 Oculens Eyewear</p>
+    <nav aria-label="social media">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/26778567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="images/social-whatsapp.png" alt="WhatsApp logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/official.Oculens_Eyewear" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="images/social-instagram.png" alt="Instagram logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/OculensEyewear" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/social-facebook.png" alt="Facebook logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@Oculens_Eyewear.officia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="images/social-tiktok.png" alt="TikTok logo" width="48" height="48" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

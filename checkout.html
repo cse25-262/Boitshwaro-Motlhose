@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Checkout at Oculens Eyewear. Enter your shipping details, choose a payment method and place your order securely." />
+  <title>Checkout | Oculens Eyewear</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+  
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .shipping-section h2,
+    .payment-heading {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+
+    .form-field {
+      margin-bottom: 16px;
+    }
+
+    .form-field label {
+      display: inline-block;
+      min-width: 130px;
+      font-size: 0.93rem;
+      font-weight: 400;
+    }
+
+    .form-field input[type="text"],
+    .form-field input[type="email"],
+    .form-field input[type="tel"] {
+      border: none;
+      border-bottom: 1.5px solid var(--dark);
+      border-radius: 0;
+      background: transparent;
+      padding: 4px 2px;
+      font-size: 0.93rem;
+      width: 240px;
+      outline: none;
+    }
+
+    .form-field input:focus {
+      border-bottom-color: var(--primary);
+      box-shadow: none;
+    }
+
+    .order-summary-panel {
+      padding: 0;
+    }
+
+    .order-summary-panel h2 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-align: right;
+      color: var(--dark);
+    }
+
+    .summary-items {
+      margin-bottom: 20px;
+    }
+
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.93rem;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .summary-item .item-name {
+      max-width: 200px;
+    }
+
+    .summary-totals table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .summary-totals td {
+      padding: 5px 4px;
+      font-size: 0.93rem;
+      color: var(--dark);
+    }
+
+    .summary-totals td:last-child {
+      text-align: right;
+    }
+
+    .summary-totals .divider td {
+      border-top: 2px solid var(--dark);
+      padding-top: 10px;
+      font-weight: 600;
+    }
+
+    .payment-section {
+      margin-top: 40px;
+    }
+
+    .payment-heading {
+      text-align: center;
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: var(--font-display);
+      font-weight: 400;
+    }
+
+    .payment-options {
+      margin: 20px 0;
+    }
+
+    .card-details {
+      margin-top: 20px;
+      font-size: 0.93rem;
+      color: var(--dark);
+      line-height: 2;
+    }
+
+    .card-details input[type="text"] {
+      border: none;
+      border-bottom: 1.5px solid var(--dark);
+      border-radius: 0;
+      background: transparent;
+      padding: 2px 4px;
+      outline: none;
+      font-size: 0.93rem;
+      width: auto;
+    }
+
+    .card-details input:focus {
+      border-bottom-color: var(--primary);
+      box-shadow: none;
+    }
+
+    .place-order-wrap {
+      text-align: right;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 800px) {
+      .checkout-grid {
+        grid-template-columns: 1fr;
+      }
+      .order-summary-panel h2 { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Oculens Eyewear Home">
+        <img
+          src="images/logo.jpeg"
+          alt="Oculens Eyewear logo – glasses icon with eye and wrench"
+          width="68"
+          height="56" />
+      </a>
+
+      <nav aria-label="primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="shop.html" aria-current="page">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <a href="contact.html" aria-label="Contact via email" class="icon-mail">✉</a>
+        <a href="contact.html#faq" aria-label="Help and FAQ" class="icon-help">?</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <h1 class="page-title">Checkout</h1>
+
+      <form id="checkout-form" action="#" method="post" novalidate>
+
+        <div class="checkout-grid">
+
+          <!-- ── Left: Shipping + Payment ─────────────────── -->
+          <div>
+
+            <!-- Shipping Details -->
+            <section class="shipping-section" aria-labelledby="shipping-heading">
+              <h2 id="shipping-heading">Shipping Details</h2>
+
+              <div class="form-field">
+                <label for="full-name">Full Name:</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Phone number:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+
+              <div class="form-field">
+                <label for="address">Address:</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  required
+                  autocomplete="street-address"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+
+              <div class="form-field">
+                <label for="city">City:</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  required
+                  autocomplete="address-level2"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+
+              <div class="form-field">
+                <label for="country">Country:</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  required
+                  autocomplete="country-name"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+
+              <div class="form-field">
+                <label for="postal-code">Postal Code:</label>
+                <input
+                  type="text"
+                  id="postal-code"
+                  name="postal-code"
+                  required
+                  autocomplete="postal-code"
+                  aria-required="true"
+                  placeholder="" />
+              </div>
+            </section>
+
+            <section class="payment-section" aria-labelledby="payment-heading">
+              <h2 class="payment-heading" id="payment-heading">Payment Method</h2>
+
+              <fieldset class="payment-options" style="border:none;padding:0;">
+                <legend class="sr-only">Select payment method</legend>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="pay-card"     name="payment" value="card"     onclick="toggleCardDetails(this)" />
+                  <label for="pay-card">Credit/Debit Card</label>
+                </div>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="pay-mobile"   name="payment" value="mobile" />
+                  <label for="pay-mobile">Mobile Money</label>
+                </div>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="pay-bank"     name="payment" value="bank" />
+                  <label for="pay-bank">Bank Transfer</label>
+                </div>
+              </fieldset>
+
+              <div class="card-details" id="card-details" aria-live="polite" style="display:none;">
+                <div>
+                  Card Number:
+                  <input type="text" id="card-number" name="card-number"
+                    maxlength="19" placeholder="____ ____ ____ ____"
+                    aria-label="Card number" style="width:200px;" />
+                </div>
+                <div>
+                  Expiry Date:
+                  <input type="text" id="expiry" name="expiry"
+                    maxlength="5" placeholder="MM/YY"
+                    aria-label="Expiry date" style="width:60px;" />
+                </div>
+                <div>
+                  CVV:
+                  <input type="text" id="cvv" name="cvv"
+                    maxlength="3" placeholder="___"
+                    aria-label="CVV security code" style="width:44px;" />
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+          <aside class="order-summary-panel" aria-label="Order summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-items">
+              <div class="summary-item">
+                <span class="item-name">Gossip Girl glasses</span>
+                <span>P350</span>
+              </div>
+              <div class="summary-item">
+                <span class="item-name">Deluca Round glasses</span>
+                <span>P400</span>
+              </div>
+            </div>
+
+            <div class="summary-totals">
+              <table summary="Checkout order totals">
+                <tbody>
+                  <tr>
+                    <td>Subtotal :</td>
+                    <td>P750</td>
+                  </tr>
+                  <tr>
+                    <td>Shipping fee:</td>
+                    <td>P100</td>
+                  </tr>
+                  <tr>
+                    <td>Tax (14%):</td>
+                    <td>P105</td>
+                  </tr>
+                  <tr>
+                    <td>Discount:</td>
+                    <td>P150</td>
+                  </tr>
+                  <tr class="divider">
+                    <td>Total:</td>
+                    <td>P805</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </aside>
+
+        </div><!-- /.checkout-grid -->
+
+        <!-- Place Order -->
+        <div class="place-order-wrap">
+          <button type="submit" class="btn btn-primary" onclick="return placeOrder(event)">
+            Place Order
+          </button>
+        </div>
+
+      </form>
+
+    </div><!-- /.container -->
+  </main>
+
+  <footer>
+    <a href="services.html#guide" class="footer-link">Guide to choosing the right frame</a>
+    <p class="footer-copy">Copyrights &nbsp; 2026 Oculens Eyewear</p>
+    <nav aria-label="social media">
+      <ul class="social-icons">
+        <li>
+          <a href="https://wa.me/26778567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <img src="images/social-whatsapp.png" alt="WhatsApp logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/official.Oculens_Eyewear" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="images/social-instagram.png" alt="Instagram logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://facebook.com/OculensEyewear" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="images/social-facebook.png" alt="Facebook logo" width="48" height="48" />
+          </a>
+        </li>
+        <li>
+          <a href="https://tiktok.com/@Oculens_Eyewear.officia" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="images/social-tiktok.png" alt="TikTok logo" width="48" height="48" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    function toggleCardDetails(checkbox) {
+      var panel = document.getElementById('card-details');
+      panel.style.display = checkbox.checked ? 'block' : 'none';
+    }
+
+    function placeOrder(event) {
+      event.preventDefault();
+      var form = document.getElementById('checkout-form');
+      var required = form.querySelectorAll('[required]');
+      var valid = true;
+
+      required.forEach(function(field) {
+        if (!field.value.trim()) {
+          field.style.borderBottomColor = 'red';
+          valid = false;
+        } else {
+          field.style.borderBottomColor = '';
+        }
+      });
+
+      var paymentSelected = document.querySelector('input[name="payment"]:checked');
+      if (!paymentSelected) {
+        alert('Please select a payment method.');
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Order placed successfully! Thank you for shopping with Oculens Eyewear.');
+        form.reset();
+        document.getElementById('card-details').style.display = 'none';
+      } else {
+        alert('Please fill in all required fields.');
+      }
+      return false;
+    }
+  </script>
+
+</body>
+</html>
